@@ -5,14 +5,6 @@ import Layout from "../components/layout";
 const Home: NextPage = () => {
   return (
     <>
-      <Head>
-        <title>Arthouse is coming soon</title>
-        <meta
-          name="description"
-          content="A digital product studio based in Vienna."
-        />
-      </Head>
-
       <Layout bgClass="brand-bg">
         <h1 className="font-semibold text-3xl md:text-6xl text-center leading-tight">
           Arthouse is a <br /> digital product studio <br /> based in Vienna.
