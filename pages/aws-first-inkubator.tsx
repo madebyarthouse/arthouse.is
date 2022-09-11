@@ -102,9 +102,8 @@ const AwsFirstIncubator = () => {
 
               <iframe
                 src="https://player.vimeo.com/video/425080030?h=c1cb146ed6&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                frameborder="0"
                 allow="autoplay; fullscreen; picture-in-picture"
-                allowfullscreen
+                allowFullScreen
                 className="absolute inset z-10 w-full h-full"
                 title="Small short test video"
               ></iframe>
