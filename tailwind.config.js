@@ -5,7 +5,12 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        brand: ["Sage", "serif"],
+        awsMain: ["var(--aws-font-family-main)", "sans-serif"],
+      }
+    },
   },
   plugins: [],
 }
