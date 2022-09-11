@@ -112,7 +112,10 @@ const AwsFirstIncubator = () => {
                 title="Small short test video"
               ></iframe>
             </motion.div>
-            <Script src="https://player.vimeo.com/api/player.js"></Script>
+            <Script
+              strategy="lazyOnload"
+              src="https://player.vimeo.com/api/player.js"
+            ></Script>
           </section>
         </motion.div>
       </Layout>
