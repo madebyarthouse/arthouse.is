@@ -25,31 +25,35 @@ const AwsFirstIncubator = () => {
             type: "tween",
             ease: "easeOut",
           }}
-          className="bg-neutral-200 w-full sm:max-w-lg md:max-w-3xl lg:max-w-5xl  py-24 px-5 sm:px-8 md:px-12 lg:px-16 bg-opacity-40 backdrop-blur-lg drop-shadow-lg gap-y-20 flex flex-col selection:bg-[#00377a] selection:text-white"
+          className="w-full sm:max-w-lg md:max-w-3xl lg:max-w-5xl flex flex-col selection:bg-[#00377a] selection:text-white bg-[#00377a] drop-shadow-lg"
         >
-          <h1 className="inline-flex flex-col md:flex-row gap-y-3 md:gap-x-10 items-center justify-center">
-            <Link href="/">
-              <a className="text-6xl font-bold font-brand ">Arthouse</a>
-            </Link>
-            <span className="text-2xl font-bold">x</span>
-            <a
-              href="https://www.aws.at/aws-first-inkubator/"
-              className="bg-[#00377a] h-[120px] flex items-center justify-center px-7"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Image
-                className=""
-                priority
-                src="/images/aws-logo.svg"
-                height={70}
-                width={302}
-                alt="aws austria wirtschaftsservice"
-              />
-            </a>
-          </h1>
+          <div className="w-full py-6">
+            <h1 className="inline-flex flex-col md:flex-row gap-y-3 md:gap-x-10 items-center justify-center w-full">
+              <Link href="/">
+                <a className="text-6xl font-bold font-brand text-white tracking-normal">
+                  Arthouse
+                </a>
+              </Link>
+              <span className="text-2xl font-bold text-white">x</span>
+              <a
+                href="https://www.aws.at/aws-first-inkubator/"
+                className=" h-[120px] flex items-center justify-center"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Image
+                  className=""
+                  priority
+                  src="/images/aws-logo.svg"
+                  height={70}
+                  width={302}
+                  alt="aws austria wirtschaftsservice"
+                />
+              </a>
+            </h1>
+          </div>
 
-          <section className="">
+          <section className="drop-shadow-lg">
             <motion.div
               initial={{
                 opacity: 0,

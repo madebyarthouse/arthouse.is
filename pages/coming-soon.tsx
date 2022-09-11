@@ -10,7 +10,7 @@ const Home: NextPage = () => {
           Arthouse
         </h1>
         <hr className="w-80 max-w-full border-gray-800 my-5" />
-        <h3 className="text-xl md:text-4xl text-center leading-tight">
+        <h3 className="text-xl md:text-4xl text-center leading-tight font-light">
           A digital product studio <br /> based in Vienna.
         </h3>
       </Layout>
