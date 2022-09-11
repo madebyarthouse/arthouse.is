@@ -6,12 +6,13 @@ const Home: NextPage = () => {
   return (
     <>
       <Layout bgClass="brand-bg">
-        <h1 className="font-semibold text-3xl md:text-6xl text-center leading-tight">
-          Arthouse is a <br /> digital product studio <br /> based in Vienna.
+        <h1 className="font-brand text-6xl md:text-9xl text-center leading-tight">
+          Arthouse
         </h1>
-        <h2 className="font-medium text-xl  md:text-2xl text-center mt-8">
-          This website is currently under construction.
-        </h2>
+        <hr className="w-80 border-gray-800 my-5" />
+        <h3 className="text-3xl md:text-4xl text-center leading-tight">
+          A digital product studio <br /> based in Vienna.
+        </h3>
       </Layout>
     </>
   );
