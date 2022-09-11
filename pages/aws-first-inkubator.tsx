@@ -25,7 +25,7 @@ const AwsFirstIncubator = () => {
             type: "tween",
             ease: "easeOut",
           }}
-          className="bg-neutral-200 w-full sm:max-w-lg md:max-w-3xl lg:max-w-5xl  py-24 px-5 sm:px-8 md:px-12 lg:px-16 bg-opacity-40 backdrop-blur-lg drop-shadow-lg gap-y-20 flex flex-col"
+          className="bg-neutral-200 w-full sm:max-w-lg md:max-w-3xl lg:max-w-5xl  py-24 px-5 sm:px-8 md:px-12 lg:px-16 bg-opacity-40 backdrop-blur-lg drop-shadow-lg gap-y-20 flex flex-col selection:bg-[#00377a] selection:text-white"
         >
           <h1 className="inline-flex flex-col md:flex-row gap-y-3 md:gap-x-10 items-center justify-center">
             <Link href="/">
