@@ -19,7 +19,10 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta property="og:title" content="Arthouse" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://arthouse.is" />
-        <meta property="og:image" content="/images/video-cover.png" />
+        <meta
+          property="og:image"
+          content="https://arthouse.is/images/video-cover.png"
+        />
         <meta
           property="og:description"
           content="A digital product studio based in Vienna."
