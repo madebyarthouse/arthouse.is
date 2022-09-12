@@ -98,7 +98,7 @@ const AwsFirstIncubator = () => {
 
         <div className="flex flex-col sm:flex-row gap-10">
           <a
-            href="/videos/arthouse-aws-first-inkubator.mp4"
+            href="https://drive.google.com/uc?export=download&id=1Xo8U9B7JqXCCto9wx67nCXg1r_4m8nyl"
             // eslint-disable-next-line react/no-unknown-property
             download
             className="block bg-white text-[#00377a] font-bold text-center py-2 px-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
