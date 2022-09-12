@@ -15,7 +15,7 @@ const AwsFirstIncubator = () => {
         <title>Arthouse x AWS First Inkubator</title>
       </Head>
 
-      <Layout bgClass="aws-bg">
+      <Layout bgClass="aws-bg flex flex-col gap-10">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -95,6 +95,24 @@ const AwsFirstIncubator = () => {
             ></Script>
           </section>
         </motion.div>
+
+        <div className="flex flex-col sm:flex-row gap-10">
+          <a
+            href="/videos/arthouse-aws-first-inkubator.mp4"
+            download
+            className="block bg-white text-[#00377a] font-bold text-center py-2 px-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+          >
+            Download
+          </a>
+
+          <input
+            type="text"
+            name="direct_link"
+            readOnly
+            value="https://vimeo.com/748960816"
+            className="block bg-white text-[#00377a] w-[30ch] font-bold text-center py-2 px-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+          />
+        </div>
       </Layout>
     </>
   );
