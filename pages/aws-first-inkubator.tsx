@@ -25,7 +25,7 @@ const AwsFirstIncubator = () => {
             type: "tween",
             ease: "easeOut",
           }}
-          className="w-full sm:max-w-lg md:max-w-3xl lg:max-w-4xl flex flex-col selection:bg-[#00377a] selection:text-white bg-[#00377a] drop-shadow-lg"
+          className="w-full max-w-full sm:max-w-lg md:max-w-3xl lg:max-w-4xl flex flex-col selection:bg-[#00377a] selection:text-white bg-[#00377a] drop-shadow-lg"
         >
           <section className="">
             <motion.div
@@ -67,7 +67,7 @@ const AwsFirstIncubator = () => {
                       src="/images/video-cover.png"
                       layout="fill"
                       alt="Play"
-                      className="w-full"
+                      className="w-full max-w-full"
                     />
                     <motion.span
                       whileHover={{ scale: 1.05 }}
@@ -99,6 +99,7 @@ const AwsFirstIncubator = () => {
         <div className="flex flex-col sm:flex-row gap-10">
           <a
             href="/videos/arthouse-aws-first-inkubator.mp4"
+            // eslint-disable-next-line react/no-unknown-property
             download
             className="block bg-white text-[#00377a] font-bold text-center py-2 px-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
           >
