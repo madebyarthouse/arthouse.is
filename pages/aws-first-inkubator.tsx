@@ -111,7 +111,7 @@ const AwsFirstIncubator = () => {
             name="direct_link"
             readOnly
             value="https://vimeo.com/748960816"
-            className="block bg-white text-[#00377a] w-[30ch] font-bold text-center py-2 px-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+            className="block bg-white text-[#00377a] w-full sm:w-[30ch] max-w-full font-bold text-center py-2 px-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
           />
         </div>
       </Layout>
