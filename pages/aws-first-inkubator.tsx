@@ -86,7 +86,7 @@ const AwsFirstIncubator = () => {
                 allow="autoplay; fullscreen; picture-in-picture"
                 allowFullScreen
                 className="absolute inset z-10 w-full h-full"
-                title="Small short test video"
+                title="Arthouse AWS First Inkubator Bewerbung"
               ></iframe>
             </motion.div>
             <Script
