@@ -9,3 +9,7 @@ Arthouse is a boutique digital product studio based in Vienna, Austria.
 - Typescript
 - Tailwind CSS
 - Framer Motion
+
+## Todos
+- [ ] respect `prefers-reduced-motion`
+- [ ] add content
