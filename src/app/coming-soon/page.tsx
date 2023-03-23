@@ -28,7 +28,7 @@ export default function ComingSoonPage() {
         if (entryDone) return;
 
         setCurrent(current + 1);
-      }, 1250 + (current === 0 ? 1250 : 0) - current * 100);
+      }, 1000 + (current === 0 ? 1250 : 0) - current * 100);
     }
   }, [current]);
 
