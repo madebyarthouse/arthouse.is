@@ -6,11 +6,11 @@ const Home: NextPage = () => {
   return (
     <>
       <Layout bgClass="">
-        <div className="w-full h-1/2 mix-blend-color-burn bg-red-400/70 rounded-[100px] fixed top-0 left-0 gate-open-top" />
-        <div className="w-full h-1/2 mix-blend-color-burn bg-green-400/70 rounded-[100px] fixed top-0 left-0 gate-open-bottom" />
-        <div className="w-1/2 h-full mix-blend-color-burn bg-purple-400/70 rounded-[100px] fixed top-0 left-0 gate-open-right" />
-        <div className="w-1/2 h-full mix-blend-color-burn bg-amber-400/70 rounded-[100px] fixed top-0 left-0 gate-open-left" />
-        <div className="bg-white p-5 rounded-lg">
+        <div className="w-full h-1/2 z-30 mix-blend-color-burn bg-red-400/70 rounded-[100px] fixed top-0 left-0 gate-open-top" />
+        <div className="w-full h-1/2 z-30 mix-blend-color-burn bg-green-400/70 rounded-[100px] fixed top-0 left-0 gate-open-bottom" />
+        <div className="w-1/2 h-full z-30 mix-blend-color-burn bg-purple-400/70 rounded-[100px] fixed top-0 left-0 gate-open-right" />
+        <div className="w-1/2 h-full z-30 mix-blend-color-burn bg-amber-400/70 rounded-[100px] fixed top-0 left-0 gate-open-left" />
+        <div className="bg-white relative z-20 p-5 rounded-lg">
           <h1 className="font-brand text-7xl md:text-9xl text-center leading-tight">
             Arthouse
           </h1>
