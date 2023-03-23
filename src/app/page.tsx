@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import type { ReactNode } from "react";
 import { Playfair_Display } from "next/font/google";
+import "../../styles/globals.css";
 
 const playfairDisplay = Playfair_Display({
   display: "swap",
@@ -9,23 +10,15 @@ const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
 });
 
-const Layout = ({
-  children,
-  bgClass,
-}: {
-  children: ReactNode;
-  bgClass: string;
-}) => {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <motion.main
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className={`w-screen h-screen z-10 relative flex flex-col items-center justify-center ${playfairDisplay.variable} ${bgClass}`}
+      className={`w-screen h-screen z-10 relative flex flex-col items-center justify-center ${playfairDisplay.variable}`}
     >
       {children}
     </motion.main>
   );
-};
-
-export default Layout;
+}
