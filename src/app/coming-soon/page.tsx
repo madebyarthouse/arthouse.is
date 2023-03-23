@@ -1,39 +1,51 @@
 "use client";
 
 import clsx from "clsx";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { GithubIcon, LinkedinIcon, TwitterIcon } from "lucide-react";
-import { useEffect, useLayoutEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const variants = [
-  "developers",
-  "designers",
-  "writers",
-  "photo&shy;graphers",
   "creatives",
+  "developers",
+  "photo&shy;graphers",
+  "designers",
+  "content creators",
+  "writers",
+  "strategists",
+  "artists",
   "internet junkies",
   "Arthouse",
 ] as const;
 
 export default function ComingSoonPage() {
   const [current, setCurrent] = useState(0);
-  const [showAll, setShowAll] = useState(false);
+  const [entryDone, setEntryDone] = useState(false);
 
-  useLayoutEffect(() => {
-    if (current < variants.length - 1) {
+  useEffect(() => {
+    if (current < variants.length - 1 && !entryDone) {
       setTimeout(() => {
+        if (entryDone) return;
+
         setCurrent(current + 1);
-      }, 2000 + (current === 0 ? 1500 : 0));
+      }, 1250 + (current === 0 ? 1250 : 0) - current * 100);
     }
   }, [current]);
 
   useEffect(() => {
     if (current === variants.length - 1) {
       setTimeout(() => {
-        setShowAll(true);
+        setEntryDone(true);
       }, 2000);
     }
   }, [current]);
+
+  useEffect(() => {
+    if (window.location.hash === "#entered") {
+      setEntryDone(true);
+      setCurrent(variants.length - 1);
+    }
+  }, []);
 
   return (
     <>
@@ -44,10 +56,10 @@ export default function ComingSoonPage() {
       <div
         className={clsx(
           "max-w-[95%] mx-auto relative z-20 px-5 py-10 md:px-10 lg:p-20 rounded-lg text-center text-gray-800/80 flex flex-col justify-center items-center",
-          showAll && "bg-white/80"
+          entryDone && "bg-white/80"
         )}
       >
-        {showAll && (
+        {entryDone && (
           <>
             {" "}
             <motion.span
@@ -93,27 +105,59 @@ export default function ComingSoonPage() {
           </motion.span>
           <motion.h1
             layout
-            initial={{ opacity: 0, y: 25 }}
+            initial={{ opacity: entryDone ? 1 : 0, y: entryDone ? 0 : 25 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -25 }}
+            exit={{ opacity: 0, y: 50 }}
             key={current}
             style={{
               hyphens: "auto",
             }}
-            className="font-semibold break-words font-brand text-6xl sm:text-7xl md:text-9xl text-center leading-tight"
+            className="font-semibold break-words font-brand text-6xl sm:text-7xl md:text-9xl text-center leading-tight tracking-wide"
             dangerouslySetInnerHTML={{
-              __html: variants[current],
+              __html: variants[entryDone ? variants.length - 1 : current],
             }}
           ></motion.h1>
         </motion.div>
 
-        {showAll && (
+        <AnimatePresence>
+          {!entryDone && (
+            <motion.a
+              layout
+              transition={{
+                delay: 2,
+              }}
+              initial={{
+                opacity: 0,
+                y: 25,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
+              exit={{
+                opacity: 0,
+                y: 0,
+                transition: {
+                  duration: 0.1,
+                },
+              }}
+              className="font-semibold active:scale-95 mt-2 fixed bottom-10 font-body text-gray-800/40 hover:text-gray-800/80 text-2xl"
+              href="#entered"
+              onClick={(e) => {
+                e.preventDefault();
+                setEntryDone(true);
+                setCurrent(variants.length - 1);
+              }}
+            >
+              Skip
+            </motion.a>
+          )}
+        </AnimatePresence>
+
+        {entryDone && (
           <motion.div
             layout
             className="mt-8"
-            transition={{
-              delay: 0.25,
-            }}
             initial={{
               opacity: 0,
               y: 25,
@@ -121,10 +165,13 @@ export default function ComingSoonPage() {
             animate={{
               opacity: 1,
               y: 0,
+              transition: {
+                delay: 0.25,
+              },
             }}
             exit={{
               opacity: 0,
-              y: -25,
+              y: 50,
             }}
           >
             <hr className="my-5 w-1/2 mx-auto border-t middle-slide-out border-gray-800/80" />
