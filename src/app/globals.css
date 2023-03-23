@@ -28,9 +28,7 @@
 
   html,
   body {
-    font-family: 'Inter', 'Helvetica', 'Arial', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    @apply font-body;
   }
 
   .pattern-bg {
@@ -163,11 +161,13 @@
   
   .border-entry-top {
     animation-name: border-entry-top;
-    width: 1px;
+    width: 100%;
+    transform: scaleX(0);
     height: 5px;
     position: absolute;
     top: 0;
     left: 0;
+    transform-origin: top left;
   }
 
   .border-entry-bottom {
@@ -175,65 +175,71 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 1px;
+    width: 100%;
+    transform: scaleX(0);
     height: 5px;
+    transform-origin: bottom right;
   }
 
   .border-entry-left {
     animation-name: border-entry-left;
     width: 5px;
-    height: 1px;
+    height: 100%;
+    transform: scaleY(0);
     position: absolute;
     bottom: 0;
     left: 0;
+    transform-origin: bottom left;
   }
 
   .border-entry-right {
     animation-name: border-entry-right;
     width: 5px;
-    height: 1px;
+    height: 100%;
+    transform: scaleY(0);
     position: absolute;
     top: 0;
     right: 0;
+    transform-origin: top right;
   }
 
   @keyframes border-entry-top {
     0% {
-      width: 1px;
+      transform: scaleX(0);
     }
 
     100% {
-      width: 100%;
+      transform: scaleX(1);
     }
   }
 
   @keyframes border-entry-bottom {
     0% {
-      width: 1px;
+      transform: scaleX(0);
     }
 
     100% {
-      width: 100%;
+      transform: scaleX(1);
     }
   }
 
   @keyframes border-entry-left {
     0% {
-      height: 1px;
+      transform: scaleY(0);
     }
 
     100% {
-      height: 100%;
+      transform: scaleY(1);
     }
   }
 
   @keyframes border-entry-right {
     0% {
-      height: 1px;
+      transform: scaleY(0);
     }
 
     100% {
-      height: 100%;
+      transform: scaleY(1);
     }
   }
 }

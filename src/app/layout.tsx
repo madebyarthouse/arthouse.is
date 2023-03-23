@@ -120,7 +120,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       </head>
       <body>
         <main
-          className={`w-screen h-screen z-10 relative flex flex-col items-center justify-center ${playfairDisplay.variable}`}
+          className={`w-full min-h-screen z-10 relative flex flex-col items-center justify-center ${playfairDisplay.variable}`}
         >
           {children}
         </main>
