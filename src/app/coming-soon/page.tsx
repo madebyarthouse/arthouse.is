@@ -8,8 +8,8 @@ const variants = [
   "developers",
   "designers",
   "writers",
+  "photo&shy;graphers",
   "creatives",
-  "photographers",
   "internet junkies",
   "Arthouse",
 ] as const;
@@ -22,7 +22,7 @@ export default function ComingSoonPage() {
     if (current < variants.length - 1) {
       setTimeout(() => {
         setCurrent(current + 1);
-      }, 2000);
+      }, 2000 + (current === 0 ? 3000 : 0));
     }
   }, [current]);
 
@@ -70,7 +70,7 @@ export default function ComingSoonPage() {
 
         <motion.div
           transition={{
-            delay: 2.5,
+            delay: 1.2,
           }}
           initial={{
             opacity: 0,
@@ -85,23 +85,28 @@ export default function ComingSoonPage() {
           <span className="font-semibold font-brand text-2xl md:text-4xl">
             We are
           </span>
-          {/* <AnimatePresence mode="wait"> */}
           <motion.h1
             layout
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -25 }}
             key={current}
-            className="font-semibold font-brand text-6xl sm:text-7xl md:text-9xl text-center leading-tight"
-          >
-            {variants[current]}
-          </motion.h1>
-          {/* </AnimatePresence> */}
+            style={{
+              hyphens: "auto",
+            }}
+            className="font-semibold break-words font-brand text-6xl sm:text-7xl md:text-9xl text-center leading-tight"
+            dangerouslySetInnerHTML={{
+              __html: variants[current],
+            }}
+          ></motion.h1>
         </motion.div>
 
         {showAll && (
           <motion.div
             className="mt-8"
+            transition={{
+              delay: 0.25,
+            }}
             initial={{
               opacity: 0,
               y: 25,
@@ -118,17 +123,17 @@ export default function ComingSoonPage() {
             <hr className="my-5 w-1/2 mx-auto border-t middle-slide-out border-gray-800/80" />
 
             <h3 className="!leading-7 text-xl md:text-3xl text-center font-regular font-body">
-              A botique digital product studio <br /> based in Vienna, Austria.
+              A boutique digital product studio <br /> based in Vienna, Austria.
             </h3>
 
             <hr className="my-5 w-1/2 mx-auto border-t middle-slide-out border-gray-800/80" />
 
             <a
-              className="font-semibold active:scale-95 relative text-2xl md:text-3xl inline-block group"
+              className="font-semibold active:scale-95 mt-2 relative focus-visible:outline-none text-2xl md:text-3xl inline-block group"
               href="mailto:christian.cito@arthouse.is?subject=Work with us"
             >
               <span>Work with us!</span>
-              <span className="absolute left-0 bottom-0 scale-x-0 will-change-transform transform-gpu origin-bottom-left group-hover:scale-x-100 transition-all duration-300 ease-in-out border-b-2 border-gray-800/80 w-full" />
+              <span className="absolute left-0 bottom-0 scale-x-0 will-change-transform transform-gpu origin-bottom-left group-active:scale-x-100 group-focus-visible:scale-x-100 group-hover:scale-x-100 transition-all duration-300 ease-in-out border-b-2 border-gray-800/80 w-full" />
             </a>
           </motion.div>
         )}

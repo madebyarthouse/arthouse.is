@@ -4,6 +4,7 @@ import { Metadata } from "next";
 import Script from "next/script";
 
 import "./globals.css";
+import clsx from "clsx";
 
 const playfairDisplay = Playfair_Display({
   display: "swap",
@@ -118,9 +119,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <meta name="theme-color" content="#ffffff" />
         <Script defer data-domain="arthouse.is" src="/js/script.js"></Script>
       </head>
-      <body>
+      <body className={clsx(playfairDisplay.variable)}>
         <main
-          className={`w-full min-h-screen z-10 relative flex flex-col items-center justify-center ${playfairDisplay.variable}`}
+          className={`w-full h-full z-10 relative flex flex-col items-center justify-center`}
         >
           {children}
         </main>
