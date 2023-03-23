@@ -36,7 +36,7 @@ export default function ComingSoonPage() {
     if (current === variants.length - 1) {
       setTimeout(() => {
         setEntryDone(true);
-      }, 2000);
+      }, 1000);
     }
   }, [current]);
 
