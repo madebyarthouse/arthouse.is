@@ -23,10 +23,10 @@ export const metadata: Metadata = {
     description: "A digital product studio based in Vienna.",
     images: [
       {
-        url: "https://arthouse.is/images/video-cover.png",
+        url: "https://arthouse.is/og.png",
         width: 1200,
         height: 630,
-        alt: "Arthouse",
+        alt: "We are Arthouse, a boutique digital product studio based in Vienna, Austria.",
       },
     ],
     locale: "en_US",

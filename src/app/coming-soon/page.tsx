@@ -1,7 +1,8 @@
 "use client";
 
 import clsx from "clsx";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
+import { GithubIcon, LinkedinIcon, TwitterIcon } from "lucide-react";
 import { useEffect, useLayoutEffect, useState } from "react";
 
 const variants = [
@@ -22,7 +23,7 @@ export default function ComingSoonPage() {
     if (current < variants.length - 1) {
       setTimeout(() => {
         setCurrent(current + 1);
-      }, 2000 + (current === 0 ? 3000 : 0));
+      }, 2000 + (current === 0 ? 1500 : 0));
     }
   }, [current]);
 
@@ -42,7 +43,7 @@ export default function ComingSoonPage() {
       <span className="transform-gpu mix-blend-color-burn bg-amber-400/70 rounded-[100px] gate-open-left" />
       <div
         className={clsx(
-          "max-w-[95%] mx-auto relative z-20 px-5 py-10 md:px-10 lg:p-20 rounded-lg text-center text-gray-800/80",
+          "max-w-[95%] mx-auto relative z-20 px-5 py-10 md:px-10 lg:p-20 rounded-lg text-center text-gray-800/80 flex flex-col justify-center items-center",
           showAll && "bg-white/80"
         )}
       >
@@ -74,17 +75,22 @@ export default function ComingSoonPage() {
           }}
           initial={{
             opacity: 0,
+            scale: 0.8,
             y: 10,
           }}
           animate={{
             opacity: 1,
+            scale: 1,
             y: 0,
           }}
           className="flex text-left flex-col items-center gap-1"
         >
-          <span className="font-semibold font-brand text-2xl md:text-4xl">
+          <motion.span
+            layout
+            className="font-semibold font-brand text-2xl md:text-4xl"
+          >
             We are
-          </span>
+          </motion.span>
           <motion.h1
             layout
             initial={{ opacity: 0, y: 25 }}
@@ -103,6 +109,7 @@ export default function ComingSoonPage() {
 
         {showAll && (
           <motion.div
+            layout
             className="mt-8"
             transition={{
               delay: 0.25,
@@ -135,6 +142,51 @@ export default function ComingSoonPage() {
               <span>Work with us!</span>
               <span className="absolute left-0 bottom-0 scale-x-0 will-change-transform transform-gpu origin-bottom-left group-active:scale-x-100 group-focus-visible:scale-x-100 group-hover:scale-x-100 transition-all duration-300 ease-in-out border-b-2 border-gray-800/80 w-full" />
             </a>
+
+            <ul className="flex gap-2 justify-center items-center mt-7">
+              <li className="relative">
+                <a
+                  href="https://twitter.com/madebyarthouse"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className="p-2 z-10 rounded-full active:scale-95 overflow-clip group border border-[#00acee] block"
+                >
+                  <TwitterIcon
+                    size={20}
+                    className="z-30 relative transition-colors group-hover:text-white group-active:text-white group-focus-visible:text-white text-[#00acee]"
+                  />
+                  <span className="absolute inset-0 z-20 transition-all rounded-full scale-0 group-focus-visible:scale-100 group-hover:scale-100 group-active:scale-90 bg-[#00acee]" />
+                </a>
+              </li>
+              <li className="relative">
+                <a
+                  href="https://github.com/madebyarthouse"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className="p-2 z-10 rounded-full active:scale-95 overflow-clip group border border-[#171515] block"
+                >
+                  <GithubIcon
+                    size={20}
+                    className="z-30 relative transition-colors group-hover:text-white group-active:text-white group-focus-visible:text-white text-[#171515]"
+                  />
+                  <span className="absolute inset-0 z-20 transition-all rounded-full scale-0 group-focus-visible:scale-100 group-hover:scale-100 group-active:scale-90 bg-[#171515]" />
+                </a>
+              </li>
+              <li className="relative">
+                <a
+                  href="https://linkedin.com/company/madebyarthouse"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className="p-2 z-10 rounded-full active:scale-95 overflow-clip group border border-[#0072b1] block"
+                >
+                  <LinkedinIcon
+                    size={20}
+                    className="z-30 relative transition-colors group-hover:text-white group-active:text-white group-focus-visible:text-white text-[#0072b1]"
+                  />
+                  <span className="absolute inset-0 z-20 transition-all rounded-full scale-0 group-focus-visible:scale-100 group-hover:scale-100 group-active:scale-90 bg-[#0072b1]" />
+                </a>
+              </li>
+            </ul>
           </motion.div>
         )}
       </div>
