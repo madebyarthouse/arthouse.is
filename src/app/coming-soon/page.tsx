@@ -8,6 +8,7 @@ const variants = [
   "developers",
   "designers",
   "writers",
+  "creatives",
   "photographers",
   "internet junkies",
   "Arthouse",
