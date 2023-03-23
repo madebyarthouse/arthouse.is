@@ -187,7 +187,7 @@ export default function ComingSoonPage() {
               href="mailto:christian.cito@arthouse.is?subject=Work with us"
             >
               <span>Work with us!</span>
-              <span className="absolute left-0 bottom-0 scale-x-0 will-change-transform transform-gpu origin-bottom-left group-active:scale-x-100 group-focus-visible:scale-x-100 group-hover:scale-x-100 transition-all duration-300 ease-in-out border-b-2 border-gray-800/80 w-full" />
+              <span className="absolute left-0 bottom-0 scale-x-0 will-change-transform transform-gpu origin-center group-active:scale-x-100 group-focus-visible:scale-x-100 group-hover:scale-x-100 transition-all duration-300 ease-in-out border-b-2 border-gray-800/80 w-full" />
             </a>
 
             <ul className="flex gap-2 justify-center items-center mt-7">
