@@ -117,6 +117,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
         <meta name="theme-color" content="#ffffff" />
+        <meta name="twitter:card" content="summary_large_image" />
         <Script defer data-domain="arthouse.is" src="/js/script.js"></Script>
       </head>
       <body className={clsx(playfairDisplay.variable)}>
