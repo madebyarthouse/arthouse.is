@@ -12,12 +12,18 @@
           url('/fonts/sage-webfont.svg#sageregular') format('svg');
       font-weight: normal;
       font-style: normal;
+      font-display: block;
   }
 
   :root {
     --aws-font-family: 'Inter', 'Helvetica', 'Arial', sans-serif;
     --aws-bg-color: #00377a;
     --brand-bg-color: #0484428e;
+  }
+
+  ::selection {
+    @apply bg-gray-800/80;
+    color: #fff;
   }
 
   html,
@@ -50,12 +56,11 @@
   .gate-open-right {
     animation-duration: 2s;
     animation-fill-mode: forwards;
-    animation-timing-function: ease-out;
-    will-change: transform, filter;
+    animation-timing-function: cubic-bezier(0, 0, 0.05, 0.77);
+    will-change: transform;
     contain: strict;
     content-visibility: auto;
-    /* animation-iteration-count: infinite;
-    animation-direction: alternate; */
+    /* animation-iteration-count: infinite; */
   }
   
   .gate-open-top {
@@ -104,48 +109,40 @@
 
   @keyframes gate-open-top {
     0% {
-      filter: blur(1px);
       transform: translateY(50%);
     }
 
     100% {
-      filter: blur(0px);
       transform: translateY(-93%);
     }
   }
 
   @keyframes gate-open-bottom {
     0% {
-      filter: blur(1px);
       transform: translateY(50%);
     }
 
     100% {
-      filter: blur(0px);
       transform: translateY(193%);
     }
   }
 
   @keyframes gate-open-left {
     0% {
-      filter: blur(1px);
       transform: translateX(50%);
     }
 
     100% {
-      filter: blur(0px);
       transform: translateX(-93%);
     }
   }
 
   @keyframes gate-open-right {
     0% {
-      filter: blur(1px);
       transform: translateX(50%);
     }
 
     100% {
-      filter: blur(0px);
       transform: translateX(193%);
     }
   }
@@ -161,8 +158,7 @@
     will-change: transform, filter;
     contain: strict;
     content-visibility: auto;
-    /* animation-iteration-count: infinite;
-    animation-direction: alternate; */
+    /* animation-iteration-count: infinite; */
   }
   
   .border-entry-top {
