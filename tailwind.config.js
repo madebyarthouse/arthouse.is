@@ -8,9 +8,10 @@ module.exports = {
     extend: {
       fontFamily: {
         brand: ["Sage", "serif"],
+        body: ["var(--playfair-display)", "serif"],
         awsMain: ["var(--aws-font-family-main)", "sans-serif"],
-      }
+      },
     },
   },
   plugins: [],
-}
+};

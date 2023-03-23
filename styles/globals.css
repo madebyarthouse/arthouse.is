@@ -15,14 +15,14 @@
   }
 
   :root {
-    --aws-font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    --aws-font-family: 'Inter', 'Helvetica', 'Arial', sans-serif;
     --aws-bg-color: #00377a;
     --brand-bg-color: #0484428e;
   }
 
   html,
   body {
-    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-family: 'Inter', 'Helvetica', 'Arial', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -48,69 +48,190 @@
   .gate-open-bottom,
   .gate-open-left,
   .gate-open-right {
-    animation-duration: 2.5s;
+    animation-duration: 2s;
     animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
-    /* animation-iteration-count: infinite; */
+    animation-timing-function: ease-out;
+    /* animation-iteration-count: infinite;
+    animation-direction: alternate; */
   }
   
   .gate-open-top {
     animation-name: gate-open-top;
+    z-index: 20;
     transform: translateY(50%);
+    width: 100%;
+    height: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
   }
 
   .gate-open-bottom {
     animation-name: gate-open-bottom;
+    z-index: 20;
     transform: translateY(50%);
+    width: 100%;
+    height: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
   }
 
   .gate-open-left {
     animation-name: gate-open-left;
+    z-index: 20;
     transform: translateX(50%);
+    width: 50%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
   }
 
   .gate-open-right {
     animation-name: gate-open-right;
+    z-index: 20;
     transform: translateX(50%);
+    width: 50%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
   }
 
   @keyframes gate-open-top {
     0% {
+      filter: blur(1px);
       transform: translateY(50%);
     }
 
     100% {
-      transform: translateY(-95%);
+      filter: blur(0px);
+      transform: translateY(-93%);
     }
   }
 
   @keyframes gate-open-bottom {
     0% {
+      filter: blur(1px);
       transform: translateY(50%);
     }
 
     100% {
-      transform: translateY(195%);
+      filter: blur(0px);
+      transform: translateY(193%);
     }
   }
 
   @keyframes gate-open-left {
     0% {
+      filter: blur(1px);
       transform: translateX(50%);
     }
 
     100% {
-      transform: translateX(-95%);
+      filter: blur(0px);
+      transform: translateX(-93%);
     }
   }
 
   @keyframes gate-open-right {
     0% {
+      filter: blur(1px);
       transform: translateX(50%);
     }
 
     100% {
-      transform: translateX(195%);
+      filter: blur(0px);
+      transform: translateX(193%);
+    }
+  }
+
+  .border-entry-top,
+  .border-entry-bottom,
+  .border-entry-left,
+  .border-entry-right {
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+    animation-delay: 250ms;
+    /* animation-iteration-count: infinite;
+    animation-direction: alternate; */
+  }
+  
+  .border-entry-top {
+    animation-name: border-entry-top;
+    width: 1px;
+    height: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .border-entry-bottom {
+    animation-name: border-entry-bottom;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 1px;
+    height: 5px;
+  }
+
+  .border-entry-left {
+    animation-name: border-entry-left;
+    width: 5px;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  .border-entry-right {
+    animation-name: border-entry-right;
+    width: 5px;
+    height: 1px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  @keyframes border-entry-top {
+    0% {
+      width: 1px;
+    }
+
+    100% {
+      width: 100%;
+    }
+  }
+
+  @keyframes border-entry-bottom {
+    0% {
+      width: 1px;
+    }
+
+    100% {
+      width: 100%;
+    }
+  }
+
+  @keyframes border-entry-left {
+    0% {
+      height: 1px;
+    }
+
+    100% {
+      height: 100%;
+    }
+  }
+
+  @keyframes border-entry-right {
+    0% {
+      height: 1px;
+    }
+
+    100% {
+      height: 100%;
     }
   }
 }
