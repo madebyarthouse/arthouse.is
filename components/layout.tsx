@@ -13,7 +13,7 @@ const Layout = ({
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className={`w-screen h-screen flex flex-col items-center justify-center pattern-bg ${bgClass}`}
+      className={`w-screen h-screen relative flex flex-col items-center justify-center ${bgClass}`}
     >
       {children}
     </motion.main>
