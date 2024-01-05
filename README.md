@@ -1,4 +1,4 @@
-# arthouse.is
+# madebyarthouse.com
 ![Clip showing the intro animation of arthouse.is](/public/preview-clip.gif)
 
 Arthouse is a boutique digital product studio based in Vienna, Austria.
